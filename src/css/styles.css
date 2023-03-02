@@ -180,6 +180,7 @@ nav {
     height: 450px;
     border-radius: 1000px;
 }
+
 .circulo2 {
     background-color: #ff88008c;
     width: 200px;
@@ -229,6 +230,7 @@ nav {
     background: linear-gradient(#ffe1c3d8, #ffffffd8);
     position: relative;
 }
+
 .dog-image {
     position: absolute;
     width: 30vw;
@@ -401,6 +403,30 @@ nav {
 #avanzar:hover {
     cursor: pointer;
 }
+@keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "a"; }
+    2.2791%, 25.0698% { content: "ah"; }
+    3.4186%, 23.9302% { content: "aho"; }
+    4.5581%, 22.7907% { content: "ahor"; }
+    5.6977%, 21.6512% { content: "ahora"; }
+
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "n"; }
+    33.0465%, 49.0000% { content: "no"; }
+    34.1860%, 47.8605% { content: "now"; }
+
+    54.6977%, 75.2093% { content: ""; }
+    55.8372%, 74.0698% { content: "Y"; }
+    56.9767%, 72.9302% { content: "YA"; }
+
+    78.6279%, 96.8605% { content: ""; }
+    79.7674%, 95.7209% { content: "A"; }
+    80.9070%, 94.5814% { content: "AH"; }
+    82.0465%, 93.4419% { content: "AHO"; }
+    83.1860%, 92.3023% { content: "AHOR"; }
+    84.3256%, 91.1628% { content: "AHORA"; }
+}
 
 .btn-comprar {
     background-color: #39f;
@@ -409,6 +435,31 @@ nav {
     font-weight: bold;
     padding: 20px;
     transition: all 0.5s ease;
+}
+
+.btn-comprar span {
+    transition: all 1s ease;
+    font-size: 40px;
+}
+
+.btn-comprar span {
+    --caret: currentcolor;
+}
+
+.btn-comprar span::after {
+    content: "";
+    animation: typing 13.5s infinite;
+}
+
+.btn-comprar span::after {
+    border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+    .typewriter::after {
+        animation: none;
+    }
 }
 
 .btn-comprar:hover {
@@ -425,6 +476,7 @@ nav {
     font-size: 50px;
     font-family: var(--font-fam);
 }
+
 .text-contact {
     font-weight: 400;
     font-family: var(--font-fam);
